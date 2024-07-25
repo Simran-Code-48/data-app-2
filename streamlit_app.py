@@ -28,7 +28,6 @@ def update_female_centric(conn, id, new_value):
 
 # Initialize connection
 conn = get_connection()
-st.write(conn)
 data = fetch_data(conn)
 
 # Initialize session state for row index and female_centric value

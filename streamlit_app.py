@@ -4,10 +4,12 @@ import psycopg2
 # Define your connection string
 conn_string = st.secrets["conn_string"]
 
+
 # Establish a connection to the PostgreSQL database
 def get_connection():
     conn = psycopg2.connect(conn_string)
     return conn
+
 
 # Fetch data from the database
 def fetch_data(conn):
@@ -26,6 +28,7 @@ def update_female_centric(conn, id, new_value):
 
 # Initialize connection
 conn = get_connection()
+st.write(conn)
 data = fetch_data(conn)
 
 # Initialize session state for row index and female_centric value

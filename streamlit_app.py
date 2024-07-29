@@ -29,7 +29,7 @@ def fetch_data(conn):
 
 # Update the female_centric value in the database
 def update_female_centric(conn, id, new_value):
-   query = "UPDATE apps SET female_centric = %s WHERE id = %s;"
+    query = "UPDATE apps SET female_centric = %s WHERE id = %s;"
     try:
         with conn.cursor() as cursor:
             cursor.execute(query, (new_value, id))
